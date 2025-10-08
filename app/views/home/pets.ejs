@@ -58,7 +58,20 @@
             <div class="pets-grid">
                 <div class="pet-card" data-pet="rex">
                     <div class="pet-image-container">
-                        <img src="/img/Zeus-cachorro_10.jpeg" alt="Rex" loading="lazy">
+                        <div class="pet-slider">
+                            <img src="/img/Zeus-cachorro_10.jpeg" alt="Rex 1" class="pet-slide active" loading="lazy">
+                            <img src="/img/exemplo1.jpeg" alt="Rex 2" class="pet-slide" loading="lazy">
+                            <img src="/img/principal1.jpeg" alt="Rex 3" class="pet-slide" loading="lazy">
+                        </div>
+                        <div class="slider-controls">
+                            <button class="slider-btn prev" data-pet="rex"><i class="fas fa-chevron-left"></i></button>
+                            <div class="slider-dots">
+                                <span class="dot active" data-slide="0"></span>
+                                <span class="dot" data-slide="1"></span>
+                                <span class="dot" data-slide="2"></span>
+                            </div>
+                            <button class="slider-btn next" data-pet="rex"><i class="fas fa-chevron-right"></i></button>
+                        </div>
                         <div class="pet-overlay">
                             <div class="pet-actions">
                                 <button class="action-btn favorite" title="Favoritar">
@@ -227,3 +240,4 @@
             <button id="contatoBtn">Quero Adotar!</button>
         </div>
     </div>
+    <script>document.getElementById('current-page').textContent = 'Pets';</script>

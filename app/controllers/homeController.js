@@ -1,15 +1,18 @@
 module.exports = {
     index:  function(req, res){
-        res.render('home/index', {fileName: "main"});
+        res.render('home/layout', {fileName: "home"});
     },
     sobre: function(req, res){
-        res.render('home/index', {fileName:'sobre'});
+        res.render('home/layout', {fileName:'about'});
     },
     loja: function(req, res){
-        res.render('home/index', {fileName:'marketplace'});
+         res.render('home/layout', {fileName:'marketplace'});
     },
     pets: function(req, res){
-        res.render('home/index', {fileName:'pets'});
+         res.render('home/layout', {fileName:'pets'});
+    },
+    contato: function(req, res){
+        res.render('home/layout', {fileName:'contact'});
     }
 };
 

@@ -14,5 +14,8 @@ homeRouter.get('/home/loja', function(req, res){
 homeRouter.get('/home/pets', function(req, res){
      homeController.pets(req,res);
 })
+homeRouter.get('/home/contato', function(req, res){
+    homeController.contato(req,res);
+})
 
 module.exports = homeRouter;
