@@ -1,6 +1,15 @@
 document.getElementById('contatoForm').addEventListener('submit', function (e) {
     e.preventDefault();
-    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+
+    // Mostra o alerta customizado
+    const customAlert = document.getElementById('customAlert');
+    customAlert.classList.add('show');
+
+    // Esconde o alerta após 3 segundos
+    setTimeout(() => {
+        customAlert.classList.remove('show');
+    }, 3000);
+
     this.reset(); // Limpa o formulário após envio
 });
 

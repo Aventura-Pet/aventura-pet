@@ -35,11 +35,12 @@ header .container {
 .logo {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
 }
 
 .logo img {
-    height: 50px;
-    margin-right: 10px;
+    height: 32px;
 }
 
 /* Menu Desktop */
@@ -146,7 +147,7 @@ section:hover {
 
 /* Títulos dentro das sections */
 section h2 {
-    color: #ff6f61;
+    color: #fafafa;
     font-size: 1.8rem;
     margin-bottom: 1rem;
     display: flex;
@@ -159,7 +160,7 @@ section p,
 section li {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #444;
+    color: #fafafa;
 }
 
 /* Lista personalizada */

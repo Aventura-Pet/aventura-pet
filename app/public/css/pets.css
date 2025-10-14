@@ -36,11 +36,12 @@ header .container {
 .logo {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
 }
 
 .logo img {
-    height: 50px;
-    margin-right: 10px;
+    height: 32px;
 }
 
 nav ul {

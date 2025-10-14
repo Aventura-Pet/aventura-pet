@@ -151,6 +151,24 @@ ul, ol {
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 @keyframes fadeInRight {
     from {
         opacity: 0;
@@ -232,6 +250,14 @@ header .logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    flex-wrap: nowrap;
+}
+
+header .logo .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
 }
 
 header .logo h1 {
@@ -283,6 +309,7 @@ header nav ul li a:hover::after {
 header .logo img {
     height: 32px;
     width: auto;
+    flex-shrink: 0;
 }
 
 .hamburger {
@@ -411,8 +438,9 @@ header .logo img {
     z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--spacing-lg);
+    padding: 0;
     text-align: center;
+    width: 100%;
 }
 
 .hero-content {
@@ -1290,4 +1318,43 @@ header .logo img {
 .submit-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(0, 55, 107, 0.4);
+}
+
+/* ===== CUSTOM ALERT ===== */
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: var(--text-white);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 30px var(--shadow-heavy);
+    z-index: 10000;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all var(--transition-base);
+    max-width: 400px;
+    pointer-events: none;
+}
+
+.custom-alert.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.alert-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.alert-content i {
+    font-size: var(--font-size-xl);
+    color: var(--accent-yellow);
+}
+
+.alert-content span {
+    font-weight: 500;
+    line-height: 1.4;
 }
