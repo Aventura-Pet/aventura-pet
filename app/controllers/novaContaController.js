@@ -9,8 +9,8 @@ const temperamentoModel = require('../model/models/temperamentoModel');
 
 module.exports = {
     novaConta: function(req, res){
-        
-        res.render("nova-conta/index",{fileName:"boas-vindas"});
+
+        res.render("nova-conta/boas-vindas", {session: req.session});
         req.session.strErrorMsg = "";
     },
     avisos: function(req, res){

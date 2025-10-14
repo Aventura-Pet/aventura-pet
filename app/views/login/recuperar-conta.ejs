@@ -1,7 +1,26 @@
-<main>
-    <form action="/login/recuperar" method="post">
-        <labe>Email</labe>
-        <input type="email" name="emailUsuario">
-        <input type="submit" value="verificar">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Conta - Aventura Pet</title>
+    <link rel="stylesheet" href="/css/login1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <img class="logo" src="/img/logo aventura pet.png" alt="logo aventura pet">
+    <br>
+    <p>Ao tocar em "Verificar", você concorda com nossos termos. Saiba como processamos seus dados em nossa <u>Política de Privacidade</u> e <u>Política de Cookies</u>.</p>
+   
+    <br>
+    <form action="/login/recuperar" method="post" id="form">
+        <div class="input-container">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="emailUsuario" class="email" placeholder="Digite seu Email">
+        </div>
+        <br>
+        <button type="submit" class="continue-button">Verificar</button>
     </form>
-</main>
+    <h2><a style="text-decoration: none; color: #00376b;" href="/login1">Voltar ao Login</a></h2>
+</body>
+</html>

@@ -7,8 +7,11 @@ module.exports = {
                 msg.push({"menssagem":error.msg});
             })
         }
-       
+
         res.render("login/index",{fileName:"main", msgErrors: msg});
+    },
+    login1: function(req, res){
+        res.render("login/login1", {session: req.session});
     },
     novaConta: function(req, res){
         res.render("login/index",{fileName:"boas-vindas"});
@@ -21,7 +24,7 @@ module.exports = {
     },
     recuperarConta: function(req, res)
     {
-        res.render("login/index", {fileName:"recuperar-conta"});
+        res.render("login/recuperar-conta", {session: req.session});
     },
     recuperar: function(req, res)
     {

@@ -11,6 +11,10 @@ loginRouter.get('/login', (req, res) => {
   loginController.index(req, res);
 });
 
+loginRouter.get('/login1', (req, res) => {
+  loginController.login1(req, res);
+});
+
 loginRouter.post('/login/entrar',
   loginValidator,
   function (req, res, next){
@@ -21,9 +25,11 @@ loginRouter.post('/login/entrar',
       return loginController.index(req, res, errorValidator);
     }
     next();
-
-  aventuraPetController.index(req, res);
-});
+  },
+  function (req, res) {
+    aventuraPetController.index(req, res);
+  }
+);
 
 loginRouter.get('/login/nova-conta', (req, res)=>{
     novaContaController.novaConta(req,res);
@@ -34,7 +40,7 @@ loginRouter.get('/login/voltar',(req, res)=>{
 });
 
 loginRouter.get('/login/recuperar-conta', function(req, res){
-  loginController.recuperarConta(req, res);
+  res.render('login/recuperar-conta')
 });
 
 loginRouter.post('/login/recuperar', function(req, res){
